@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Table from './Table'
-import TableControls from '../components/TableControls'
+import TableControls from '../components/table/TableControls'
+import PageSelector from'../components/table/PageSelector'
 import './App.css';
 
 
@@ -11,9 +12,10 @@ class App extends Component {
       allTable: [],
       pageNumber: 1,
       totalItems:1,
-      itemsPerPage:2
+      itemsPerPage:1
     }
     this.handleChangePage = this.handleChangePage.bind(this);
+    this.handlePageSelectChange = this.handlePageSelectChange.bind(this);
   }
   componentWillMount(){
     this.setState({
@@ -89,11 +91,15 @@ class App extends Component {
     
     this.setState({pageNumber: page.target.value})
   }
+  handlePageSelectChange(selection){
+    this.setState({itemsPerPage: selection.target.value})
+  }
   render() {
     return (
       <div className="App">
         <Table allTable={this.state.allTable} pageNumber={this.state.pageNumber} itemsPerPage={this.state.itemsPerPage}/>
         <TableControls pageNumber={this.state.pageNumber} totalItems={this.state.allTable.length} changePage={this.handleChangePage.bind(this)} itemsPerPage={this.state.itemsPerPage}/>
+        <PageSelector itemsPerPage={this.state.itemsPerPage} onChange={this.handlePageSelectChange}/>
       </div>
     );
   }

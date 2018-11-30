@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import style from './Table.module.css'
 
 class TableHeaders extends Component {
   render() {
@@ -6,7 +7,7 @@ class TableHeaders extends Component {
     titleStr = this.props.tableKey;
     titleStr = titleStr.charAt(0).toUpperCase() + titleStr.substring(1,titleStr.length)
     return (
-      <th>{titleStr}</th>
+      <th className={style.tableHeading}>{titleStr}</th>
     )
   }
 }

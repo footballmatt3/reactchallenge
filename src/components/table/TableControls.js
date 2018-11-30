@@ -13,17 +13,18 @@ class TableControls extends Component {
     pagesAmount = 0;
 
     for(let i=1;i < this.props.totalItems; i++){
-        if(i===1 || (i % this.props.itemsPerPage) === 1) {
+        if(i===1 || (i % this.props.itemsPerPage) === 1 || this.props.itemsPerPage == 1) {
         pagesAmount++
-        if(pagesAmount === this.props.pageNumber){
+        if(pagesAmount == this.props.pageNumber){
+            
             pagesArray.push({
                 page: pagesAmount,
                 selected:true
             });
-        }else{
+        }else{            
             pagesArray.push({
-                page: pagesAmount
-                ,selected:false
+                page: pagesAmount,
+                selected:false
             });
         }
         
@@ -37,7 +38,7 @@ class TableControls extends Component {
         )
     })
     return(
-        <div>
+        <div >
             {PagePages}
         </div>
     )

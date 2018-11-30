@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+
+.table{
+    box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.06);
+    border-collapse:collapse;
+    margin:auto;
+    text-align: left;
+}
+.table td {
+    padding:10px;
+}
+.table th {
+    padding:10px;
+}
+.tableHeading{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    color: #323232;
+    
+}
+.tableRowOdd{
+background-color:#F7F7F7;
+}
+.tableRowEven{
+    background-color:#FFF;
+}    
+
+.tableData{    
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: normal;
+    color: #2D283E;    
+    
+}
+.tableData1c{    
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: normal;
+    color: #1E88E5;
+}
+.tablePage_Selected{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color:#1E88E5;
+    color:#fff;
+    border:1px solid #919191;
+    box-shadow: inset#323232;
+
+}
+.tablePage_Unselected{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color:#fff;
+    color:#1E88E5;
+    border:1px solid #1E88E5;
+}
