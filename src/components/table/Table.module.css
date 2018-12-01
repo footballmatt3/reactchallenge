@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+/* With the typography import you should only import the weights that are needed - to minimise loading time MF */
+
+/* Each component should have its own CSS file (Certainly the table controller and the table should be seperate so they can be used independently) MF */
+
+/* If they were to have their own CSS files then the class names can be shorter. Eg 'selected' and 'unselected' as opposed to 'tablePage_Unselected' (which name doesn't actually make sense as it is relating to the table control.)  MF  */
+
+/* So with CSS Modules you don't need to prefix all the class names with the component name.  MF */
+
+
+
 
 .table{
     box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.06);
@@ -40,6 +50,8 @@ background-color:#F7F7F7;
     font-weight: normal;
     color: #1E88E5;
 }
+
+
 .tablePage_Selected{
     font-family: 'Nunito';
     font-style: normal;

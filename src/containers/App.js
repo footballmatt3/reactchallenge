@@ -8,6 +8,7 @@ import './App.css';
 class App extends Component {
   constructor(){
     super();
+    // Be consistent with your code. 2 of these have spaces 2 don't. We prefer spaces =] MF
     this.state = {
       allTable: [],
       pageNumber: 1,
@@ -17,6 +18,14 @@ class App extends Component {
     this.handleChangePage = this.handleChangePage.bind(this);
     this.handlePageSelectChange = this.handlePageSelectChange.bind(this);
   }
+
+
+// Never use ComponentWillMount
+// Instead just set the state in the constructor. MF
+// "These methods are considered legacy and you should avoid them in new code: UNSAFE_componentWillMount()"
+// https://reactjs.org/docs/react-component.html 
+
+
   componentWillMount(){
     this.setState({
       allTable:[
@@ -86,7 +95,8 @@ class App extends Component {
       ]
       
     })
-  }
+  } 
+  // Placing a line break between functions would make the code easier to read and understand. MF
   handleChangePage(page){
     
     this.setState({pageNumber: page.target.value})

@@ -7,6 +7,9 @@ class TableControls extends Component {
 
 
   render() {
+
+    // Why don't you just write this as " let pagesArray = [] " ? MF
+
     let pagesArray;
     pagesArray = [];
     let pagesAmount;
