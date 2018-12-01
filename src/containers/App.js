@@ -92,7 +92,7 @@ class App extends Component {
     this.setState({pageNumber: page.target.value})
   }
   handlePageSelectChange(selection){
-    this.setState({itemsPerPage: selection.target.value})
+    this.setState({itemsPerPage: selection.target.value, pageNumber: 1})
   }
   render() {
     return (
