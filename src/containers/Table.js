@@ -24,6 +24,8 @@ class Table extends Component {
 
         tableKeys = Object.keys(tableObj[0]);
 
+        tableKeys = tableKeys.slice(1,tableKeys.length)
+
         tableItemsKeys = tableKeys.map(tableKey => {
             return(
             <TableHeaders key={tableKey} tableKey={tableKey}/>

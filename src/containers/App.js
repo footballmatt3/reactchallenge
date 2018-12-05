@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Table from './Table'
-import TableControls from '../components/table/TableControls'
-import PageSelector from'../components/table/PageSelector'
+import TableControls from '../components/tablecontrol/TableControls'
+import PageSelector from'../components/pageselector/PageSelector'
 import './App.css';
 
 
@@ -10,24 +10,6 @@ class App extends Component {
     super();
     // Be consistent with your code. 2 of these have spaces 2 don't. We prefer spaces =] MF
     this.state = {
-      allTable: [],
-      pageNumber: 1,
-      totalItems:1,
-      itemsPerPage:1
-    }
-    this.handleChangePage = this.handleChangePage.bind(this);
-    this.handlePageSelectChange = this.handlePageSelectChange.bind(this);
-  }
-
-
-// Never use ComponentWillMount
-// Instead just set the state in the constructor. MF
-// "These methods are considered legacy and you should avoid them in new code: UNSAFE_componentWillMount()"
-// https://reactjs.org/docs/react-component.html 
-
-
-  componentWillMount(){
-    this.setState({
       allTable:[
         {
           id: 1,
@@ -92,18 +74,35 @@ class App extends Component {
           price: 3400,
           paid: false
         }
-      ]
-      
-    })
-  } 
+      ],
+      pageNumber: 1,
+      totalItems: 1,
+      itemsPerPage: 1
+    }
+    this.handleChangePage = this.handleChangePage.bind(this);
+    this.handlePageSelectChange = this.handlePageSelectChange.bind(this);
+  }
+
+
+// Never use ComponentWillMount
+// Instead just set the state in the constructor. MF
+// "These methods are considered legacy and you should avoid them in new code: UNSAFE_componentWillMount()"
+// https://reactjs.org/docs/react-component.html 
+
+ 
   // Placing a line break between functions would make the code easier to read and understand. MF
   handleChangePage(page){
     
     this.setState({pageNumber: page.target.value})
+
   }
+
   handlePageSelectChange(selection){
+
     this.setState({itemsPerPage: selection.target.value, pageNumber: 1})
+
   }
+  
   render() {
     return (
       <div className="App">

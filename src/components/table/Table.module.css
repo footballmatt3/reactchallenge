@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400');
 
 /* With the typography import you should only import the weights that are needed - to minimise loading time MF */
 
@@ -52,23 +52,3 @@ background-color:#F7F7F7;
 }
 
 
-.tablePage_Selected{
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    background-color:#1E88E5;
-    color:#fff;
-    border:1px solid #919191;
-    box-shadow: inset#323232;
-
-}
-.tablePage_Unselected{
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    background-color:#fff;
-    color:#1E88E5;
-    border:1px solid #1E88E5;
-}

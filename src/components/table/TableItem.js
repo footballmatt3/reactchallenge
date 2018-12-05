@@ -3,6 +3,7 @@ import style from './Table.module.css'
 
 class Tableitem extends Component {
   render() {   
+    
     if(this.props.column === 0){
       if(this.props.tableitem === true){
         return (    

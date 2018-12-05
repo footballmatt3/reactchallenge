@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TableControl from './TableControl';
+import style from './TableControl.module.css'
 
 class TableControls extends Component {
     
@@ -10,10 +11,8 @@ class TableControls extends Component {
 
     // Why don't you just write this as " let pagesArray = [] " ? MF
 
-    let pagesArray;
-    pagesArray = [];
-    let pagesAmount;
-    pagesAmount = 0;
+    let pagesArray = [];
+    let pagesAmount = 0;
 
     for(let i=1;i < this.props.totalItems; i++){
         if(i===1 || (i % this.props.itemsPerPage) === 1 || this.props.itemsPerPage == 1) {
@@ -41,7 +40,7 @@ class TableControls extends Component {
         )
     })
     return(
-        <div >
+        <div className={style.pagecontrol}>
             {PagePages}
         </div>
     )

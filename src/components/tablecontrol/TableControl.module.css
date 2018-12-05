@@ -1,0 +1,29 @@
+.selected_page{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color:#1E88E5;
+    color:#fff;
+    border-right:1px solid #1E88E5;
+    border-left:1px solid #1E88E5;
+    padding:8px;
+
+}
+.unselected_page{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color:#fff;
+    color:#1E88E5;
+    border-right:1px solid #1E88E5;
+    border-left:1px solid #1E88E5;
+    padding:8px;
+}
+.pagecontrol{
+    border-radius: 2px;
+    border:1px solid #1E88E5;
+    width:auto;
+    margin:0;
+}

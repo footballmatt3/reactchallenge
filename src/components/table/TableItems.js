@@ -6,14 +6,13 @@ class TableItems extends Component {
 
   render() {
     console.log(Math.sign(this.props.remainder))
-   let tableHeadings;
-
-   tableHeadings = this.props.keys;
+    
+   let tableHeadings = this.props.keys;
 
    let arrayTD;
 
    arrayTD = [];
-   for(let i =0 ; i < tableHeadings.length ; i++){
+   for(let i = 0 ; i < tableHeadings.length ; i++){
 
     const keys = tableHeadings[i];
     
